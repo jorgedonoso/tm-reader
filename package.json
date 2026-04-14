@@ -4,6 +4,7 @@
   "description": "TM reader",
   "main": "index.js",
   "scripts": {
+    "start": "node app.js",
     "test": "vitest"
   },
   "keywords": [],

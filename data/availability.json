@@ -1,0 +1,853 @@
+{
+  "schema": "mock:schema",
+  "meta": {
+    "type": "mock:type",
+    "modified": "2026-01-01T00:00:00Z",
+    "expires": "2026-01-01T01:00:00Z"
+  },
+  "eventId": "mockEventId",
+  "facets": [
+    {
+      "accessibility": [],
+      "areas": ["0"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DA",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DQMBYGA2DAMBQGA3XYNJQGAXDAMD4HEYC4MBQPR6DINJOGAYHY7D4PQ"],
+      "seating": "reserved",
+      "section": "101",
+      "count": 5,
+      "places": ["GEYDCOSDHI[2Q,3[A,Q],4[A,Q]]"],
+      "placeGroups": ["GF6DC"]
+    },
+    {
+      "accessibility": [],
+      "areas": ["0"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DA",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DQMBYGA2DAMBQGA3XYNJQGAXDAMD4HEYC4MBQPR6DINJOGAYHY7D4PQ"],
+      "seating": "reserved",
+      "section": "102",
+      "count": 9,
+      "places": ["GEYDEOSDHI[2A,4Q,YT[A,C,E],ZD[C,E,G,I]]"],
+      "placeGroups": ["GF6DC"]
+    },
+    {
+      "accessibility": [],
+      "areas": ["0"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DA",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DQMBYGA2DAMBQGA3XYNJQGAXDAMD4HEYC4MBQPR6DINJOGAYHY7D4PQ"],
+      "seating": "reserved",
+      "section": "103",
+      "count": 5,
+      "places": ["GEYDGOSDHI[2[A,Q],3[A,Q],ZQ]"],
+      "placeGroups": ["GF6DC"]
+    },
+    {
+      "accessibility": [],
+      "areas": ["5"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DK",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DQMBYGA2DAMBQGA3XYMRSGUXDAMD4GQYC4NJQPR6DEMBOGI2XY7D4PQ"],
+      "seating": "reserved",
+      "section": "201",
+      "count": 8,
+      "places": ["GIYDCOSDHI[3[A,Q],YT[E,G,I,K],Z[A,Q]]"],
+      "placeGroups": ["GF6DC"]
+    },
+    {
+      "accessibility": [],
+      "areas": ["5"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DK",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6EGMBQGAZDAMBQGAYDS7BVGE"],
+      "seating": "reserved",
+      "section": "201",
+      "count": 2,
+      "places": ["GIYDCOSKHI[YQ,ZA]"],
+      "placeGroups": ["GF6DQ"]
+    },
+    {
+      "accessibility": [],
+      "areas": ["5"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DK",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DC7BVGE"],
+      "seating": "reserved",
+      "section": "201",
+      "count": 3,
+      "places": ["GIYDCOSKHI[2Q,4[A,Q]]"],
+      "placeGroups": []
+    },
+    {
+      "accessibility": [],
+      "areas": ["5"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DK",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DQMBYGA2DAMBQGA3XYMRSGUXDAMD4GQYC4NJQPR6DEMBOGI2XY7D4PQ"],
+      "seating": "reserved",
+      "section": "202",
+      "count": 4,
+      "places": ["GIYDEOSIHI[2[A,Q],3A,ZQ]"],
+      "placeGroups": ["GF6DC"]
+    },
+    {
+      "accessibility": [],
+      "areas": ["5"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DK",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DQMBYGA2DAMBQGA3XYMRSGUXDAMD4GQYC4NJQPR6DEMBOGI2XY7D4PQ"],
+      "seating": "reserved",
+      "section": "204",
+      "count": 6,
+      "places": ["GIYDIOSIHI[3[A,Q],YT[K,M,O,Q]]"],
+      "placeGroups": ["GF6DC"]
+    },
+    {
+      "accessibility": [],
+      "areas": ["5"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DK",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6EGMBQGAZDAMBQGAYDS7BVGA"],
+      "seating": "reserved",
+      "section": "204",
+      "count": 1,
+      "places": ["GIYDIOSMHIZDE"],
+      "placeGroups": ["GF6DQ"]
+    },
+    {
+      "accessibility": [],
+      "areas": ["5"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DK",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DC7BVGA"],
+      "seating": "reserved",
+      "section": "204",
+      "count": 1,
+      "places": ["GIYDIOSMHIZDG"],
+      "placeGroups": []
+    },
+    {
+      "accessibility": [],
+      "areas": ["5"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DK",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DQMBYGA2DAMBQGA3XYMRSGUXDAMD4GQYC4NJQPR6DEMBOGI2XY7D4PQ"],
+      "seating": "reserved",
+      "section": "205",
+      "count": 8,
+      "places": ["GIYDKOSDHI[2A,4[A,Q],YT[A,C,K,M],ZQ]"],
+      "placeGroups": ["GF6DC"]
+    },
+    {
+      "accessibility": [],
+      "areas": ["6"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DM",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DC7BVGI"],
+      "seating": "reserved",
+      "section": "302",
+      "count": 12,
+      "places": ["GMYDEOSCHI[2[A,Q],3[A,Q],4A,Y[Q,T[O,Q,S]],Z[A,DA,Q]]"],
+      "placeGroups": []
+    },
+    {
+      "accessibility": [],
+      "areas": ["6"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DM",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DC7BVGM"],
+      "seating": "reserved",
+      "section": "302",
+      "count": 59,
+      "places": [
+        "GMYDEOS[DHI[3Q,4[A,Q],Y[Q,T[A,C,E,G,I,K,M,O,Q,S]],Z[A,DA]],EHI[2[A,Q],3A,YQ,Z[A,D[G,I],Q]],FHI[2[A,Q],3[A,Q],4[A,Q],Y[Q,T[A,C,E,G,I,K,M,O,Q,S]],Z[A,D[A,C,E,G,I],Q]],GHIZD[I,K,M,O,Q],HHI[2[A,Q],3[A,Q],4[A,Q]]]"
+      ],
+      "placeGroups": []
+    },
+    {
+      "accessibility": [],
+      "areas": ["6"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DM",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DC7BVGQ"],
+      "seating": "reserved",
+      "section": "302",
+      "count": 36,
+      "places": [
+        "GMYDEOS[IHI[Y[Q,T[A,C,E,G,I,K]],Z[A,D[G,I,K,M,O,Q,S]]],KHI[YT[A,C,E,G,I,K,M,O,Q,S],ZD[A,C,E]],LHI[3Q,4[A,Q],YT[A,Q,S],ZD[A,C]]]"
+      ],
+      "placeGroups": []
+    },
+    {
+      "accessibility": [],
+      "areas": ["6"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DM",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DQMBYGA2DAMBQGA3XYMRQGAXDAMD4GM3C4MBQPR6DCOBOGAYHY7D4PQ"],
+      "seating": "reserved",
+      "section": "303",
+      "count": 14,
+      "places": ["GMYDGOSBHI[2[A,Q],3[A,Q],4A,YT[G,I,Q,S],Z[D[A,C,E,G],Q]]"],
+      "placeGroups": ["GF6DC"]
+    },
+    {
+      "accessibility": [],
+      "areas": ["6"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DM",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DC7BVGE"],
+      "seating": "reserved",
+      "section": "303",
+      "count": 7,
+      "places": ["GMYDGOSDHI[2[A,Q],3[A,Q],4[A,Q],ZQ]"],
+      "placeGroups": []
+    },
+    {
+      "accessibility": [],
+      "areas": ["6"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DM",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DC7BVGI"],
+      "seating": "reserved",
+      "section": "303",
+      "count": 44,
+      "places": [
+        "GMYDGOS[EHIYT[E,G,I,K,M],FHI[2[A,Q],3[A,Q],4[A,Q],YT[A,C,E,G,I,K,M,O],ZD[E,G,I]],GHI[2Q,3[A,Q],4Q,YT[A,C,E,G,I,K],ZDE],KHI[2[A,Q],3A,YT[A,C,E,G,I,S],Z[DA,Q]]]"
+      ],
+      "placeGroups": []
+    },
+    {
+      "accessibility": [],
+      "areas": ["6"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DM",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6EGMBQGAZDAMBQGAYDS7BVGI"],
+      "seating": "reserved",
+      "section": "303",
+      "count": 2,
+      "places": ["GMYDGOSKHI[YQ,ZA]"],
+      "placeGroups": ["GF6DQ"]
+    },
+    {
+      "accessibility": [],
+      "areas": ["6"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DM",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6EGMBQGAZDAMBQGAYDS7BVGM"],
+      "seating": "reserved",
+      "section": "303",
+      "count": 14,
+      "places": [
+        "GMYDGOS[LHI[YQ,ZA],MHI[YQ,Z[A,D[K,M]]],NHI[YQ,ZA],OHI[YQ,Z[A,D[M,O]]],QHI[YQ,ZA]]"
+      ],
+      "placeGroups": ["GF6DQ"]
+    },
+    {
+      "accessibility": [],
+      "areas": ["6"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DM",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DC7BVGM"],
+      "seating": "reserved",
+      "section": "303",
+      "count": 53,
+      "places": [
+        "GMYDGOS[LHI[2[A,Q],3[A,Q],4[A,Q],YT[A,C,E,G,I,K,M,O,Q]],MHI[2[A,Q],3[A,Q],4A,YTS,Z[D[A,C,E,G,I],Q]],NHI[2A,ZQ],OHI[2[A,Q],4[A,Q],YT[A,C,E,G,I,K,M,O],ZQ],QHI[2Q,3[A,Q],4A,YT[K,M,O,Q],ZD[C,E,G]]]"
+      ],
+      "placeGroups": []
+    },
+    {
+      "accessibility": [],
+      "areas": ["6"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DM",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DQMBYGA2DAMBQGA3XYMRQGAXDAMD4GM3C4MBQPR6DCOBOGAYHY7D4PQ"],
+      "seating": "reserved",
+      "section": "304",
+      "count": 12,
+      "places": ["GMYDIOSEHI[2[A,Q],3A,4Q,YT[A,O,Q,S],Z[D[A,K,M],Q]]"],
+      "placeGroups": ["GF6DC"]
+    },
+    {
+      "accessibility": [],
+      "areas": ["6"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DM",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6EGMBQGAZDAMBQGAYDS7BVGI"],
+      "seating": "reserved",
+      "section": "304",
+      "count": 2,
+      "places": ["GMYDIOSNHI[YQ,ZA]"],
+      "placeGroups": ["GF6DQ"]
+    },
+    {
+      "accessibility": [],
+      "areas": ["6"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DM",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DQMBYGA2DAMBQGA3XYMRQGAXDAMD4GM3C4MBQPR6DCOBOGAYHY7D4PQ"],
+      "seating": "reserved",
+      "section": "305",
+      "count": 14,
+      "places": ["GMYDKOSBHI[2[A,Q],3[A,Q],4A,YT[G,I,K,M],Z[D[C,E,G,I],Q]]"],
+      "placeGroups": ["GF6DC"]
+    },
+    {
+      "accessibility": [],
+      "areas": ["6"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DM",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DC7BVGE"],
+      "seating": "reserved",
+      "section": "305",
+      "count": 6,
+      "places": ["GMYDKOSDHI[YT[G,I,O,Q,S],ZDA]"],
+      "placeGroups": []
+    },
+    {
+      "accessibility": [],
+      "areas": ["6"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DM",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6EGMBQGAZDAMBQGAYDS7BVGE"],
+      "seating": "reserved",
+      "section": "305",
+      "count": 2,
+      "places": ["GMYDKOSDHIZD[K,M]"],
+      "placeGroups": ["GF6DQ"]
+    },
+    {
+      "accessibility": [],
+      "areas": ["6"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DM",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DC7BVGI"],
+      "seating": "reserved",
+      "section": "305",
+      "count": 46,
+      "places": [
+        "GMYDKOS[EHI[2A,4[A,Q],YT[A,C,E,G],Z[D[C,E,G,I],Q]],FHI[3[A,Q],YT[I,K,M,O,Q,S],ZD[A,C]],GHI[4[A,Q],YT[A,C,E,G,I],ZD[G,I,K,M]],KHI[3Q,4[A,Q],YT[A,C,K,M,O,Q,S],ZD[A,C,E]]]"
+      ],
+      "placeGroups": []
+    },
+    {
+      "accessibility": [],
+      "areas": ["6"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DM",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6EGMBQGAZDAMBQGAYDS7BVGI"],
+      "seating": "reserved",
+      "section": "305",
+      "count": 10,
+      "places": [
+        "GMYDKOS[EHIZD[K,M],FHIZD[M,O],IHIZD[E,G],KHI[YQ,Z[A,D[G,I]]]]"
+      ],
+      "placeGroups": ["GF6DQ"]
+    },
+    {
+      "accessibility": [],
+      "areas": ["6"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DM",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6EGMBQGAZDAMBQGAYDS7BVGM"],
+      "seating": "reserved",
+      "section": "305",
+      "count": 20,
+      "places": [
+        "GMYDKOS[LHI[YQ,Z[A,D[I,K]]],MHI[YQ,Z[A,D[K,M]]],NHI[YQ,Z[A,D[K,M]]],OHI[YQ,Z[A,D[M,O]]],QHI[YQ,Z[A,T[A,C]]]]"
+      ],
+      "placeGroups": ["GF6DQ"]
+    },
+    {
+      "accessibility": [],
+      "areas": ["6"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DM",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DC7BVGM"],
+      "seating": "reserved",
+      "section": "305",
+      "count": 59,
+      "places": [
+        "GMYDKOS[LHI[2Q,3[A,Q],YT[M,O,Q,S],ZD[A,C]],MHI[2[A,Q],3A,ZD[C,E,G,I]],NHI[YT[A,C,E,G,I,K,M,O,Q,S],Z[D[A,C,E],Q]],OHI[2[A,Q],3[A,Q],YT[G,I,K,M,O],ZD[I,K]],QHI[2[A,Q],3A,YT[A,C,E,G,I,K],Z[D[A,C,E,G,I,K,M,O],Q]]]"
+      ],
+      "placeGroups": []
+    },
+    {
+      "accessibility": [],
+      "areas": ["6"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DM",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DC7BVGI"],
+      "seating": "reserved",
+      "section": "306",
+      "count": 13,
+      "places": ["GMYDMOSCHI[2Q,3A,YT[A,C,E,G,I,K,M,O],ZD[I,K,M]]"],
+      "placeGroups": []
+    },
+    {
+      "accessibility": [],
+      "areas": ["6"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DM",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DC7BVGM"],
+      "seating": "reserved",
+      "section": "306",
+      "count": 72,
+      "places": [
+        "GMYDMOS[DHI[YT[G,I,K,M,O,Q,S],ZD[A,C,E,G,I,K,M,O]],EHI[2Q,3[A,Q],4A,ZD[C,E,G,I,K]],FHI[2Q,3[A,Q],4[A,Q],YT[A,C,E,G,I,K,M,O,Q,S],ZD[A,C,E,O,Q]],GHIZD[I,K,M,O,Q,S],HHI[3[A,Q],4[A,Q],YT[A,C,E,G,I,K,M,O,Q,S],Z[D[A,C,E,G,I,K,S],TA]]]"
+      ],
+      "placeGroups": []
+    },
+    {
+      "accessibility": [],
+      "areas": ["6"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DM",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DC7BVGQ"],
+      "seating": "reserved",
+      "section": "306",
+      "count": 49,
+      "places": [
+        "GMYDMOS[IHI[2[A,Q],3A,YQ,Z[A,D[K,M,O,Q,S],Q,TA]],KHI[2[A,Q],3[A,Q],4[A,Q],YT[A,C,E,G,I,K,M,O,Q,S],Z[A,D[A,C,E,G,I,K,M,O,Q],Q]],LHI[4[A,Q],YT[A,C,Q,S],ZD[A,C]],QHIZD[I,K]]"
+      ],
+      "placeGroups": []
+    },
+    {
+      "accessibility": [],
+      "areas": ["3", "7"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DOLBT",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DC7BVGU"],
+      "seating": "reserved",
+      "section": "401",
+      "count": 6,
+      "places": ["GQYDCOS[CHIYT[A,C],DHI4[A,Q],EHI[3Q,4A]]"],
+      "placeGroups": []
+    },
+    {
+      "accessibility": [],
+      "areas": ["7"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DO",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DC7BVGU"],
+      "seating": "reserved",
+      "section": "402",
+      "count": 57,
+      "places": [
+        "GQYDEOS[CHI[Y[Q,TC],ZA],DHI[YQ,ZA],EHI[4Q,Y[Q,T[A,G,I,K,M,S]],Z[A,D[A,C,E],Q]],FHI[2[A,Q],3A,4Q,Y[Q,T[A,G,I,K]],Z[A,D[C,E],Q]],GHI[2Q,3[A,Q],4A,Y[Q,T[C,E,G,I,K,M,O,Q]],Z[A,D[C,E]]],HHI[YQ,ZA],IHI[YQ,Z[A,D[I,K]]],KHI[YQ,Z[A,D[I,K]]]]"
+      ],
+      "placeGroups": []
+    },
+    {
+      "accessibility": ["wheelchair"],
+      "areas": ["7"],
+      "attributes": ["accessible"],
+      "available": true,
+      "description": "IE5DO",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DC7BVGU"],
+      "seating": "reserved",
+      "section": "402",
+      "count": 1,
+      "places": ["GQYDEOSGHIZDK"],
+      "placeGroups": []
+    },
+    {
+      "accessibility": ["companion"],
+      "areas": ["7"],
+      "attributes": ["accessible"],
+      "available": true,
+      "description": "IE5DO",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DC7BVGU"],
+      "seating": "reserved",
+      "section": "402",
+      "count": 1,
+      "places": ["GQYDEOSGHIZDM"],
+      "placeGroups": []
+    },
+    {
+      "accessibility": [],
+      "areas": ["7"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DO",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DC7BVGY"],
+      "seating": "reserved",
+      "section": "402",
+      "count": 51,
+      "places": [
+        "GQYDEOS[LHI[Y[Q,TS],Z[A,D[I,K]]],MHI[2Q,3[A,Q],4[A,Q],Y[Q,T[A,C,E]],Z[A,D[K,M]]],NHI[YT[G,I,K,M,O,Q,S],ZD[A,C,E]],OHI[2[A,Q],3[A,Q],4[A,Q],YT[A,C,E,G,I,K,M,O,Q,S],ZD[A,C,E,G,I,K,M,O]]]"
+      ],
+      "placeGroups": []
+    },
+    {
+      "accessibility": [],
+      "areas": ["7"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DO",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DC7BVGU"],
+      "seating": "reserved",
+      "section": "403",
+      "count": 83,
+      "places": [
+        "GQYDGOS[CHI[2Q,3A,4Q,YT[A,C,E],ZD[G,I,K,M]],DHI[2Q,3[A,Q],4A,YT[G,I,K,M],ZD[C,E,O,Q]],EHI[2A,4Q,YT[A,G,I,K,M],Z[A,D[C,E,G,I,Q,S],Q]],FHI[2Q,3A,4Q,Y[Q,T[A,Q,S]],Z[A,D[E,G]]],GHI[2[A,Q],3Q,4A,YT[C,E,K,M,S],ZD[A,C,E,G]],HHI[2[A,Q],3[A,Q],4[A,Q],Y[Q,T[A,C,E,G,I,K,M,O,Q,S]],Z[A,D[A,C,E,G],Q]]]"
+      ],
+      "placeGroups": []
+    },
+    {
+      "accessibility": [],
+      "areas": ["7"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DO",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DC7BVGM"],
+      "seating": "reserved",
+      "section": "404",
+      "count": 27,
+      "places": [
+        "GQYDIOS[CHI[2Q,3A,YT[G,I],Z[D[A,C,E,G,K,M,S],TA]],DHI[2[A,Q],YT[C,E,G,I,O,Q,S],ZD[A,K,M,O,Q,S]]]"
+      ],
+      "placeGroups": []
+    },
+    {
+      "accessibility": [],
+      "areas": ["7"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DO",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DC7BVGQ"],
+      "seating": "reserved",
+      "section": "404",
+      "count": 52,
+      "places": [
+        "GQYDIOS[EHI[YT[O,Q,S],ZD[K,M]],FHI[2Q,3[A,Q],4A,Y[Q,T[G,I,S]],Z[A,D[A,C,E,G]]],GHI[2A,3Q,4[A,Q],Y[Q,T[A,K,M,O,Q]],Z[A,D[C,E,G],Q]],HHIZD[E,G],IHI[YQ,ZA],KHI[Y[Q,TS],Z[A,D[O,Q]]],LHI[2[A,Q],3A,Y[Q,T[I,K]],Z[A,D[Q,S],Q]]]"
+      ],
+      "placeGroups": []
+    },
+    {
+      "accessibility": ["companion"],
+      "areas": ["7"],
+      "attributes": ["accessible"],
+      "available": true,
+      "description": "IE5DO",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DC7BVGQ"],
+      "seating": "reserved",
+      "section": "404",
+      "count": 2,
+      "places": ["GQYDIOSGHIZD[I,O]"],
+      "placeGroups": []
+    },
+    {
+      "accessibility": ["wheelchair"],
+      "areas": ["7"],
+      "attributes": ["accessible"],
+      "available": true,
+      "description": "IE5DO",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DC7BVGQ"],
+      "seating": "reserved",
+      "section": "404",
+      "count": 2,
+      "places": ["GQYDIOSGHIZD[K,M]"],
+      "placeGroups": []
+    },
+    {
+      "accessibility": [],
+      "areas": ["7"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DO",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DC7BVGY"],
+      "seating": "reserved",
+      "section": "404",
+      "count": 19,
+      "places": [
+        "GQYDIOS[MHI[4Q,YT[A,C,S],ZD[A,C,E,G,Q,S]],NHI[2A,4Q,Y[Q,TA],Z[A,D[O,Q,S],Q]]]"
+      ],
+      "placeGroups": []
+    },
+    {
+      "accessibility": [],
+      "areas": ["7"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DO",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DC7BVGU"],
+      "seating": "reserved",
+      "section": "405",
+      "count": 93,
+      "places": [
+        "GQYDKOS[CHI[4[A,Q],YT[G,I,K,O,Q,S],ZD[A,G,I]],DHI[2[A,Q],3A,YT[C,E,G],Z[D[C,E,O,Q],Q]],EHI[2A,4Q,Y[Q,T[A,G,I,K]],Z[A,D[C,E,K,M,O,Q],Q]],FHI[2[A,Q],3A,4Q,YT[A,C,E,K,M,O,Q,S],ZD[A,C]],GHI[2[A,Q],3[A,Q],4[A,Q],Y[Q,T[A,C,E,G,Q,S]],Z[A,D[A,C,E,G],Q]],HHI[2[A,Q],3[A,Q],4[A,Q],Y[Q,T[A,C,E,G,I,K,M,O,Q,S]],Z[A,D[A,C,E,G],Q]]]"
+      ],
+      "placeGroups": []
+    },
+    {
+      "accessibility": [],
+      "areas": ["7"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DO",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DC7BVGU"],
+      "seating": "reserved",
+      "section": "406",
+      "count": 63,
+      "places": [
+        "GQYDMOS[CHIYT[C,E],DHI[4[A,Q],YT[A,C,E,K,M,S],ZD[A,C,E,K,M]],EHI[4Q,YT[A,G,I,K,M,S],ZD[A,C,K,M]],FHI[2A,4Q,Y[Q,T[A,S]],Z[A,D[A,C,E],Q]],GHI[2[A,Q],3[A,Q],4[A,Q],Y[Q,T[A,C,G,I,K,M,O,Q,S]],Z[A,D[A,C,E],Q]],IHIZD[I,K],KHI[YQ,Z[A,D[I,K]]]]"
+      ],
+      "placeGroups": []
+    },
+    {
+      "accessibility": [],
+      "areas": ["7"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DO",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DC7BVGY"],
+      "seating": "reserved",
+      "section": "406",
+      "count": 41,
+      "places": [
+        "GQYDMOS[LHIZD[I,K],MHI[2[A,Q],3[A,Q],4[A,Q],Y[Q,T[A,C]],Z[A,Q]],NHI[4Q,YT[A,C,E,G,I,K,M,O,Q,S],ZD[A,C,E,G]],OHI[YT[A,C,I,K,M,O,Q,S],ZD[A,C,E,G,I]]]"
+      ],
+      "placeGroups": []
+    },
+    {
+      "accessibility": [],
+      "areas": ["3", "7"],
+      "attributes": [],
+      "available": true,
+      "description": "IE5DOLBT",
+      "inventoryTypes": ["primary"],
+      "offerTypes": ["standard"],
+      "offers": ["GJ6DC7BVGU"],
+      "seating": "reserved",
+      "section": "407",
+      "count": 4,
+      "places": ["GQYDOOS[DHI[YQ,ZA],FHI[YQ,ZA]]"],
+      "placeGroups": []
+    }
+  ],
+
+  "_links": {
+    "self": [
+      {
+        "href": "/mock/self"
+      }
+    ],
+    "event": [
+      {
+        "href": "/mock/event"
+      }
+    ],
+    "area": [
+      {
+        "href": "/mock/areas/{areaId}",
+        "templated": true
+      }
+    ],
+    "accessibility": [
+      {
+        "href": "/mock/accessibilities/{adaTypeCode}",
+        "templated": true
+      }
+    ],
+    "offer": [
+      {
+        "href": "/mock/offers/{offerId}",
+        "templated": true
+      }
+    ],
+    "description": [
+      {
+        "href": "/mock/descriptions/{descriptionId}",
+        "templated": true
+      }
+    ],
+    "place": [
+      {
+        "href": "/mock/places/{placeId}",
+        "templated": true
+      }
+    ]
+  },
+  "_embedded": {
+    "area": [
+      {
+        "schema": "mock:schema",
+        "meta": {
+          "type": "mock:type",
+          "modified": "2026-01-01T00:00:00Z",
+          "expires": "2026-01-01T01:00:00Z"
+        },
+        "eventId": "mockEventId",
+        "areaId": "mockAreaId",
+        "areaType": "mockType",
+        "name": "mockName",
+        "description": "mockDescription",
+        "_links": {
+          "self": [
+            {
+              "href": "/mock/area/self"
+            }
+          ],
+          "event": [
+            {
+              "href": "/mock/event"
+            }
+          ]
+        }
+      }
+    ],
+    "description": [
+      {
+        "schema": "mock:schema",
+        "meta": {
+          "type": "mock:type",
+          "modified": "2026-01-01T00:00:00Z",
+          "expires": "2026-01-01T01:00:00Z"
+        },
+        "eventId": "mockEventId",
+        "descriptionId": "mockDescriptionId",
+        "descriptions": ["mockValue"],
+        "_links": {
+          "self": [
+            {
+              "href": "/mock/description/self"
+            }
+          ],
+          "event": [
+            {
+              "href": "/mock/event"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
