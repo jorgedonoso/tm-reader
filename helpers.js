@@ -1,3 +1,19 @@
+export function seatsParser(data) {
+  const zones = [];
+
+  data.pages[0].segments.forEach((zone) => {
+    zones.push(zone.name);
+    zone.segments.forEach((section) => {
+      console.log("Section: ", section.name);
+      section.segments.forEach((row) => {
+        console.log("Row: ", row.name);
+      });
+    });
+  });
+
+  return zones;
+}
+
 export function eventParser(input) {
   return parse(input);
 
