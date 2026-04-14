@@ -1,0 +1,15 @@
+{
+  "name": "tm-reader",
+  "version": "1.0.0",
+  "description": "TM reader",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "Jorge Donoso",
+  "license": "ISC",
+  "devDependencies": {
+    "vitest": "^4.1.4"
+  }
+}
