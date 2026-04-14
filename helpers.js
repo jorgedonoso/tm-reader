@@ -1,17 +1,20 @@
 export function seatsParser(data) {
   const zones = [];
+  const sections = [];
+  const rows = [];
 
   data.pages[0].segments.forEach((zone) => {
     zones.push(zone.name);
     zone.segments.forEach((section) => {
-      console.log("Section: ", section.name);
+      sections.push(section.name);
       section.segments.forEach((row) => {
-        console.log("Row: ", row.name);
+        rows.push(row.name);
       });
     });
   });
 
-  return zones;
+  // TODO: Fix struct. Nest segments.
+  return { zones, sections, rows };
 }
 
 export function eventParser(input) {
