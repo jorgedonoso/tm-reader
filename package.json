@@ -10,6 +10,7 @@
   "keywords": [],
   "author": "Jorge Donoso",
   "license": "ISC",
+  "type": "module",
   "devDependencies": {
     "vitest": "^4.1.4"
   }
