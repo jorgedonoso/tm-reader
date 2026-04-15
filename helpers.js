@@ -1,3 +1,15 @@
+export function availableSeatsParser(data) {
+  const seatIds = [];
+
+  data.facets.forEach((f) => {
+    f.places.forEach((p) => {
+      seatIds.push(...eventParser(p));
+    });
+  });
+
+  return seatIds;
+}
+
 export function seatsParser(data) {
   // Zones -> Sections -> Rows.
   const zones = data.pages[0].segments.map((zone) => {
