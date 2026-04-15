@@ -3,9 +3,21 @@ import { eventParser, seatsParser, availableSeatsParser } from "../helpers";
 import fs from "fs/promises";
 
 describe("add()", () => {
-  it("parses availability venue seats", async () => {
+  it("parses availability venue seats for today", async () => {
     const [availableSeatsRaw, expectJsonRaw] = await Promise.all([
-      fs.readFile("./data/availability.json", "utf-8"),
+      fs.readFile("./data/availability-today.json", "utf-8"),
+      fs.readFile("./tests/results/available-today-seat-ids.json", "utf-8"),
+    ]);
+
+    const availableSeats = JSON.parse(availableSeatsRaw);
+    const expectJson = JSON.parse(expectJsonRaw);
+
+    expect(availableSeatsParser(availableSeats)).toStrictEqual(expectJson);
+  });
+
+  it("parses availability venue seats for yesterday", async () => {
+    const [availableSeatsRaw, expectJsonRaw] = await Promise.all([
+      fs.readFile("./data/availability-yesterday.json", "utf-8"),
       fs.readFile("./tests/results/available-seat-ids.json", "utf-8"),
     ]);
 
@@ -439,8 +451,6 @@ describe("add()", () => {
   });
 
   it("parses hardcoded event IDs 2", () => {
-    const jorge = eventParser("GQYDOOS[DHI[YQ,ZA],FHI[YQ,ZA]]");
-    console.log(jorge);
     expect(eventParser("GQYDOOS[DHI[YQ,ZA],FHI[YQ,ZA]]")).toStrictEqual([
       "GQYDOOSDHIYQ",
       "GQYDOOSDHIZA",
