@@ -1,3 +1,17 @@
+import fs from "fs/promises";
+
+// Generic JSON reader.
+export async function readJsonFile(path) {
+  try {
+    const raw = await fs.readFile(path, "utf-8");
+    return JSON.parse(raw);
+  } catch (err) {
+    console.error(`Failed to read or parse ${path}:`, err);
+    throw err;
+  }
+}
+
+// Aggregates seat ids from data.
 export function availableSeatsParser(data) {
   const seatIds = [];
 
@@ -10,8 +24,8 @@ export function availableSeatsParser(data) {
   return seatIds;
 }
 
+// Aggregates zones, sections and rows.
 export function seatsParser(data) {
-  // Zones -> Sections -> Rows.
   const zones = data.pages[0].segments.map((zone) => {
     return {
       name: zone.name,
@@ -27,6 +41,8 @@ export function seatsParser(data) {
   return { zones };
 }
 
+// Parses event ids from single string with regex like syntax.
+// Ex: "GEYDCOSDHI[2Q,3[A,Q],4[A,Q]]"
 export function eventParser(input) {
   return parse(input);
 

@@ -1,21 +1,18 @@
-import fs from "fs/promises";
-import { seatsParser, availableSeatsParser } from "./helpers.js";
+import { seatsParser, readJsonFile, availableSeatsParser } from "./helpers.js";
 
 async function run() {
   try {
-    const [
-      seatDataRaw,
-      availabilityYesterdayDataRaw,
-      availabilityTodayDataRaw,
-    ] = await Promise.all([
-      fs.readFile("./data/seats.json", "utf-8"),
-      fs.readFile("./data/availability-yesterday.json", "utf-8"),
-      fs.readFile("./data/availability-today.json", "utf-8"),
-    ]);
+    const seatsRaw = await readJsonFile("./data/seats.json");
+    const availabilityYesterday = await readJsonFile(
+      "./data/availability-yesterday.json",
+    );
+    const availabilityToday = await readJsonFile(
+      "./data/availability-today.json",
+    );
 
     // Format seats for console output.
-    const seats = seatsParser(JSON.parse(seatDataRaw));
     const seatsPrint = [];
+    const seats = seatsParser(seatsRaw);
 
     seats.zones.forEach((z) => {
       z.sections.forEach((s) => {
@@ -31,17 +28,13 @@ async function run() {
     console.table(seatsPrint);
 
     // Format seats available yesterday for console output.
-    const yesterdayPrint = availableSeatsParser(
-      JSON.parse(availabilityYesterdayDataRaw),
-    );
+    const yesterdayPrint = availableSeatsParser(availabilityYesterday);
     console.log("Tickets Available Yesterday");
     console.log("Total: ", yesterdayPrint.length);
     console.log(yesterdayPrint);
 
     // Format seats available today for console output.
-    const todayPrint = availableSeatsParser(
-      JSON.parse(availabilityTodayDataRaw),
-    );
+    const todayPrint = availableSeatsParser(availabilityToday);
     console.log("Tickets Available Today");
     console.log("Total: ", todayPrint.length);
     console.log(todayPrint);

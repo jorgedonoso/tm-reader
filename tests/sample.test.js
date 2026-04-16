@@ -1,40 +1,36 @@
 import { describe, it, expect } from "vitest";
-import { eventParser, seatsParser, availableSeatsParser } from "../helpers";
-import fs from "fs/promises";
+import {
+  eventParser,
+  readJsonFile,
+  seatsParser,
+  availableSeatsParser,
+} from "../helpers";
 
 describe("add()", () => {
   it("parses availability venue seats for today", async () => {
-    const [availableSeatsRaw, expectJsonRaw] = await Promise.all([
-      fs.readFile("./data/availability-today.json", "utf-8"),
-      fs.readFile("./tests/results/available-today-seat-ids.json", "utf-8"),
-    ]);
-
-    const availableSeats = JSON.parse(availableSeatsRaw);
-    const expectJson = JSON.parse(expectJsonRaw);
+    const availableSeats = await readJsonFile("./data/availability-today.json");
+    const expectJson = await readJsonFile(
+      "./tests/results/available-today-seat-ids.json",
+    );
 
     expect(availableSeatsParser(availableSeats)).toStrictEqual(expectJson);
   });
 
   it("parses availability venue seats for yesterday", async () => {
-    const [availableSeatsRaw, expectJsonRaw] = await Promise.all([
-      fs.readFile("./data/availability-yesterday.json", "utf-8"),
-      fs.readFile("./tests/results/available-seat-ids.json", "utf-8"),
-    ]);
-
-    const availableSeats = JSON.parse(availableSeatsRaw);
-    const expectJson = JSON.parse(expectJsonRaw);
+    const availableSeats = await readJsonFile(
+      "./data/availability-yesterday.json",
+    );
+    const expectJson = await readJsonFile(
+      "./tests/results/available-seat-ids.json",
+    );
 
     expect(availableSeatsParser(availableSeats)).toStrictEqual(expectJson);
   });
 
   it("parses venue seats", async () => {
-    const [seatDataRaw] = await Promise.all([
-      fs.readFile("./data/seats.json", "utf-8"),
-    ]);
+    const seats = await readJsonFile("./data/seats.json");
 
-    const seatData = JSON.parse(seatDataRaw);
-
-    expect(seatsParser(seatData)).toStrictEqual({
+    expect(seatsParser(seats)).toStrictEqual({
       zones: [
         {
           name: "303",
