@@ -1,4 +1,4 @@
-import { seatsParser, readJsonFile, availableSeatsParser } from "./helpers.js";
+import { seatsParser, readJsonFile, formatAndPrintSeats } from "./helpers.js";
 
 async function run() {
   try {
@@ -27,17 +27,11 @@ async function run() {
     seatsPrint.sort((a, b) => a.zone.localeCompare(b.zone));
     console.table(seatsPrint);
 
-    // Format seats available yesterday for console output.
-    const yesterdayPrint = availableSeatsParser(availabilityYesterday);
-    console.log("Tickets Available Yesterday");
-    console.log("Total: ", yesterdayPrint.length);
-    console.log(yesterdayPrint);
+    // Print old data.
+    formatAndPrintSeats(availabilityYesterday, "Yesterday");
 
-    // Format seats available today for console output.
-    const todayPrint = availableSeatsParser(availabilityToday);
-    console.log("Tickets Available Today");
-    console.log("Total: ", todayPrint.length);
-    console.log(todayPrint);
+    // Print new data.
+    formatAndPrintSeats(availabilityToday, "Today");
   } catch (err) {
     console.error("Error reading files:", err);
   }

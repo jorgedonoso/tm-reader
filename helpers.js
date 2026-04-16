@@ -1,5 +1,13 @@
 import fs from "fs/promises";
 
+// Format and console output seats.
+export function formatAndPrintSeats(data, detail) {
+  const seats = availableSeatsParser(data);
+  console.log("Tickets Available ", detail);
+  console.log("Total: ", seats.length);
+  console.log(seats);
+}
+
 // Generic JSON reader.
 export async function readJsonFile(path) {
   try {
