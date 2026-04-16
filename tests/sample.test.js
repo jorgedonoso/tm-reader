@@ -1,9 +1,10 @@
-import { describe, it, expect } from "vitest";
+import { describe, it, vi, expect } from "vitest";
 import {
   eventParser,
   readJsonFile,
   seatsParser,
   availableSeatsParser,
+  formatAndPrintSeats,
 } from "../helpers";
 
 describe("add()", () => {
@@ -25,6 +26,40 @@ describe("add()", () => {
     );
 
     expect(availableSeatsParser(availableSeats)).toStrictEqual(expectJson);
+  });
+
+  it("prints correct seats", () => {
+    const spy = vi.spyOn(console, "log").mockImplementation(() => {});
+    const mockData = { facets: [{ places: ["Seat X", "Seat Y", "Seat Z"] }] };
+
+    formatAndPrintSeats(mockData, "Tomorrow");
+
+    expect(spy).toHaveBeenCalledTimes(3);
+
+    expect(spy.mock.calls).toEqual([
+      ["Tickets Available ", "Tomorrow"],
+      ["Total: ", 3],
+      [["Seat X", "Seat Y", "Seat Z"]],
+    ]);
+
+    spy.mockRestore();
+  });
+
+  it("prints correct empty seats", () => {
+    const spy = vi.spyOn(console, "log").mockImplementation(() => {});
+    const mockData = { facets: [{ places: [] }] };
+
+    formatAndPrintSeats(mockData, "Tomorrow");
+
+    expect(spy).toHaveBeenCalledTimes(3);
+
+    expect(spy.mock.calls).toEqual([
+      ["Tickets Available ", "Tomorrow"],
+      ["Total: ", 0],
+      [[]],
+    ]);
+
+    spy.mockRestore();
   });
 
   it("parses venue seats", async () => {
