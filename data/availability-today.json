@@ -2,7 +2,7 @@
   "schema": "mock:schema",
   "meta": {
     "type": "mock:type",
-    "modified": "2026-01-01T00:00:00Z",
+    "modified": "2026-05-11T14:00:00Z",
     "expires": "2026-01-01T01:00:00Z"
   },
   "eventId": "mockEventId",

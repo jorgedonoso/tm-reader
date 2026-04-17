@@ -30,14 +30,18 @@ describe("add()", () => {
 
   it("prints correct seats", () => {
     const spy = vi.spyOn(console, "log").mockImplementation(() => {});
-    const mockData = { facets: [{ places: ["Seat X", "Seat Y", "Seat Z"] }] };
+    const mockData = {
+      meta: { modified: "2026-05-07T13:00:00Z" },
+      facets: [{ places: ["Seat X", "Seat Y", "Seat Z"] }],
+    };
 
     formatAndPrintSeats(mockData, "Tomorrow");
 
-    expect(spy).toHaveBeenCalledTimes(3);
+    expect(spy).toHaveBeenCalledTimes(4);
 
     expect(spy.mock.calls).toEqual([
       ["Tickets Available ", "Tomorrow"],
+      ["Date ", "5/7/2026"],
       ["Total: ", 3],
       [["Seat X", "Seat Y", "Seat Z"]],
     ]);
@@ -47,14 +51,18 @@ describe("add()", () => {
 
   it("prints correct empty seats", () => {
     const spy = vi.spyOn(console, "log").mockImplementation(() => {});
-    const mockData = { facets: [{ places: [] }] };
+    const mockData = {
+      meta: { modified: "2026-05-07T13:00:00Z" },
+      facets: [{ places: [] }],
+    };
 
     formatAndPrintSeats(mockData, "Tomorrow");
 
-    expect(spy).toHaveBeenCalledTimes(3);
+    expect(spy).toHaveBeenCalledTimes(4);
 
     expect(spy.mock.calls).toEqual([
       ["Tickets Available ", "Tomorrow"],
+      ["Date ", "5/7/2026"],
       ["Total: ", 0],
       [[]],
     ]);
