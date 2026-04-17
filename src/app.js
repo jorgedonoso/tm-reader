@@ -1,4 +1,6 @@
-import { seatsParser, readJsonFile, formatAndPrintSeats } from "./helpers.js";
+import { seatsParser } from "./logic/parserLogic.js";
+import { readJsonFile } from "./logic/helpers.js";
+import { formatAndPrintSeats } from "./logic/printLogic.js";
 
 async function run() {
   try {

@@ -4,8 +4,8 @@
   "description": "TM reader",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "test": "vitest"
+    "start": "node ./src/app.js",
+    "test": "vitest --reporter=verbose"
   },
   "keywords": [],
   "author": "Jorge Donoso",

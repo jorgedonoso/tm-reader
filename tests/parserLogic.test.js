@@ -1,13 +1,12 @@
-import { describe, it, vi, expect } from "vitest";
+import { describe, it, expect } from "vitest";
+import { readJsonFile } from "../src/logic/helpers";
 import {
   eventParser,
-  readJsonFile,
   seatsParser,
   availableSeatsParser,
-  formatAndPrintSeats,
-} from "../helpers";
+} from "../src/logic/parserLogic";
 
-describe("print logic tests", () => {
+describe("parsers logic tests", () => {
   it("parses availability venue seats for today", async () => {
     const availableSeats = await readJsonFile("./data/availability-today.json");
     const expectJson = await readJsonFile(
@@ -26,48 +25,6 @@ describe("print logic tests", () => {
     );
 
     expect(availableSeatsParser(availableSeats)).toStrictEqual(expectJson);
-  });
-
-  it("prints correct seats", () => {
-    const spy = vi.spyOn(console, "log").mockImplementation(() => {});
-    const mockData = {
-      meta: { modified: "2026-05-07T13:00:00Z" },
-      facets: [{ places: ["Seat X", "Seat Y", "Seat Z"] }],
-    };
-
-    formatAndPrintSeats(mockData, "Tomorrow");
-
-    expect(spy).toHaveBeenCalledTimes(4);
-
-    expect(spy.mock.calls).toEqual([
-      ["Tickets Available ", "Tomorrow"],
-      ["Date ", "5/7/2026"],
-      ["Total: ", 3],
-      [["Seat X", "Seat Y", "Seat Z"]],
-    ]);
-
-    spy.mockRestore();
-  });
-
-  it("prints correct empty seats", () => {
-    const spy = vi.spyOn(console, "log").mockImplementation(() => {});
-    const mockData = {
-      meta: { modified: "2026-05-07T13:00:00Z" },
-      facets: [{ places: [] }],
-    };
-
-    formatAndPrintSeats(mockData, "Tomorrow");
-
-    expect(spy).toHaveBeenCalledTimes(4);
-
-    expect(spy.mock.calls).toEqual([
-      ["Tickets Available ", "Tomorrow"],
-      ["Date ", "5/7/2026"],
-      ["Total: ", 0],
-      [[]],
-    ]);
-
-    spy.mockRestore();
   });
 
   it("parses venue seats", async () => {

@@ -1,28 +1,3 @@
-import fs from "fs/promises";
-
-// Format and console output seats.
-export function formatAndPrintSeats(data, detail) {
-  const seats = availableSeatsParser(data);
-  const date = new Date(data.meta.modified);
-  const shortDate = date.toLocaleDateString("en-US");
-
-  console.log("Tickets Available ", detail);
-  console.log("Date ", shortDate);
-  console.log("Total: ", seats.length);
-  console.log(seats);
-}
-
-// Generic JSON reader.
-export async function readJsonFile(path) {
-  try {
-    const raw = await fs.readFile(path, "utf-8");
-    return JSON.parse(raw);
-  } catch (err) {
-    console.error(`Failed to read or parse ${path}:`, err);
-    throw err;
-  }
-}
-
 // Aggregates seat ids from data.
 export function availableSeatsParser(data) {
   const seatIds = [];
