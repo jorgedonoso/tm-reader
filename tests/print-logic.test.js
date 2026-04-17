@@ -7,7 +7,7 @@ import {
   formatAndPrintSeats,
 } from "../helpers";
 
-describe("add()", () => {
+describe("print logic tests", () => {
   it("parses availability venue seats for today", async () => {
     const availableSeats = await readJsonFile("./data/availability-today.json");
     const expectJson = await readJsonFile(
