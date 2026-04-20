@@ -1,6 +1,9 @@
 import { seatsParser } from "./logic/parserLogic.js";
 import { readJsonFile } from "./logic/helpers.js";
-import { formatAndPrintSeats } from "./logic/printLogic.js";
+import {
+  formatAndPrintSeats,
+  buildAndPrintMissingTickets,
+} from "./logic/printLogic.js";
 
 async function run() {
   try {
@@ -27,6 +30,8 @@ async function run() {
     });
 
     seatsPrint.sort((a, b) => a.zone.localeCompare(b.zone));
+
+    console.table("Seats by zone, section, and row");
     console.table(seatsPrint);
 
     // Print old data.
@@ -34,6 +39,9 @@ async function run() {
 
     // Print new data.
     formatAndPrintSeats(availabilityToday, "Today");
+
+    // Missing tickets.
+    buildAndPrintMissingTickets();
   } catch (err) {
     console.error("Error reading files:", err);
   }

@@ -11,13 +11,12 @@ describe("print logic tests", () => {
 
     formatAndPrintSeats(mockData, "Tomorrow");
 
-    expect(spy).toHaveBeenCalledTimes(4);
+    expect(spy).toHaveBeenCalledTimes(3);
 
     expect(spy.mock.calls).toEqual([
-      ["Tickets Available ", "Tomorrow"],
+      ["Tickets Available", "Tomorrow"],
       ["Date ", "5/7/2026"],
       ["Total: ", 3],
-      [["Seat X", "Seat Y", "Seat Z"]],
     ]);
 
     spy.mockRestore();
@@ -32,13 +31,12 @@ describe("print logic tests", () => {
 
     formatAndPrintSeats(mockData, "Tomorrow");
 
-    expect(spy).toHaveBeenCalledTimes(4);
+    expect(spy).toHaveBeenCalledTimes(3);
 
     expect(spy.mock.calls).toEqual([
-      ["Tickets Available ", "Tomorrow"],
+      ["Tickets Available", "Tomorrow"],
       ["Date ", "5/7/2026"],
       ["Total: ", 0],
-      [[]],
     ]);
 
     spy.mockRestore();
