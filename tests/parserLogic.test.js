@@ -4,9 +4,30 @@ import {
   eventParser,
   seatsParser,
   availableSeatsParser,
+  mapSeats,
 } from "../src/logic/parserLogic";
 
 describe("parsers logic tests", () => {
+  it("parses details for valid seatId", async () => {
+    const seats = await readJsonFile("./data/seats.json");
+    const map = mapSeats(seats);
+
+    expect(map.find((m) => m.id == "GMYDGOSBHIZA")).toStrictEqual({
+      id: "GMYDGOSBHIZA",
+      num: "2",
+      row: "A",
+      section: "303",
+      zone: "303",
+    });
+  });
+
+  it("returns undefined for invalid seat id", async () => {
+    const seats = await readJsonFile("./data/seats.json");
+    const map = mapSeats(seats);
+
+    expect(map.find((m) => m.id == "INVALID-SEAT-ID")).toBeUndefined();
+  });
+
   it("parses availability venue seats for today", async () => {
     const availableSeats = await readJsonFile("./data/availability-today.json");
     const expectJson = await readJsonFile(

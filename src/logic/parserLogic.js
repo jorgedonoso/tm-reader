@@ -1,3 +1,35 @@
+// Map raw data into a readable structure.
+export function mapSeats(data) {
+  let zone,
+    section,
+    row = "";
+  const res = [];
+
+  // Third-party format. Can't be changed.
+  data.pages.forEach((p) => {
+    p.segments.forEach((z) => {
+      zone = z.name;
+      z.segments.forEach((s) => {
+        section = s.name;
+        s.segments.forEach((r) => {
+          row = r.name;
+          r.placesNoKeys.forEach((pnk) => {
+            res.push({
+              id: pnk[0],
+              zone,
+              section,
+              row,
+              num: pnk[1],
+            });
+          });
+        });
+      });
+    });
+  });
+
+  return res;
+}
+
 // Aggregates seat ids from data.
 export function availableSeatsParser(data) {
   const seatIds = [];
