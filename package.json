@@ -4,14 +4,16 @@
   "description": "TM reader",
   "main": "index.js",
   "scripts": {
-    "start": "node ./src/app.js",
+    "start": "ts-node src/app.ts",
     "test": "vitest --reporter=verbose"
   },
   "keywords": [],
   "author": "Jorge Donoso",
   "license": "ISC",
-  "type": "module",
   "devDependencies": {
+    "@types/node": "^25.6.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3",
     "vitest": "^4.1.4"
   }
 }

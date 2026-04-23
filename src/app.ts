@@ -1,25 +1,19 @@
 import { seatsParser } from "./logic/parserLogic.js";
-import { readJsonFile } from "./logic/helpers.js";
 import {
   formatAndPrintSeats,
   buildAndPrintMissingTickets,
 } from "./logic/printLogic.js";
+import { getData } from "./logic/dataLogic";
 
 async function run() {
   try {
-    const seatsRaw = await readJsonFile("./data/seats.json");
-    const availabilityYesterday = await readJsonFile(
-      "./data/availability-yesterday.json",
-    );
-    const availabilityToday = await readJsonFile(
-      "./data/availability-today.json",
-    );
+    const { availabilityToday, availabilityYesterday, seats } = await getData();
 
     // Format seats for console output.
     const seatsPrint = [];
-    const seats = seatsParser(seatsRaw);
+    const parsedSeats = seatsParser(seats);
 
-    seats.zones.forEach((z) => {
+    parsedSeats.zones.forEach((z) => {
       z.sections.forEach((s) => {
         seatsPrint.push({
           zone: z.name,
