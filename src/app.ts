@@ -2,7 +2,7 @@ import { seatsParser } from "./logic/parserLogic.js";
 import {
   formatAndPrintSeats,
   buildAndPrintMissingTickets,
-} from "./logic/printLogic.js";
+} from "./logic/printLogic";
 import { getData } from "./logic/dataLogic";
 
 async function run() {

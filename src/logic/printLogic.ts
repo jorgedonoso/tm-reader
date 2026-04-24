@@ -1,27 +1,24 @@
 import { availableSeatsParser, mapSeats } from "./parserLogic.js";
-import { readJsonFile } from "./helpers.js";
+import { getData } from "./dataLogic";
 
 // Format and console output sold tickets.
-// TODO: Elevate data.
 export async function buildAndPrintMissingTickets() {
-  const seatsRaw = await readJsonFile("./data/seats.json");
-  const availabilityYesterday = await readJsonFile(
-    "./data/availability-yesterday.json",
-  );
-  const availabilityToday = await readJsonFile(
-    "./data/availability-today.json",
-  );
+  const { availabilityToday, availabilityYesterday, seats } = await getData();
+
   const rawYesterday = availableSeatsParser(availabilityYesterday);
   const rawToday = availableSeatsParser(availabilityToday);
+  const mappedSeats = mapSeats(seats);
+
+  // Calculate and populate missing seats.
   const todaySet = new Set(rawToday);
   const missing = rawYesterday.filter((at) => !todaySet.has(at));
-  const mappedSeats = mapSeats(seatsRaw);
   const missingSeatDetails = [];
 
   missing.forEach((m) => {
     missingSeatDetails.push(mappedSeats.find((ms) => ms.id == m));
   });
 
+  // Show.
   console.log("Tickets sold between datasets");
   console.table(missingSeatDetails);
 }
@@ -32,6 +29,7 @@ export function formatAndPrintSeats(data, detail) {
   const date = new Date(data.meta.modified);
   const shortDate = date.toLocaleDateString("en-US");
 
+  // Show.
   console.log("Tickets Available", detail);
   console.log("Date ", shortDate);
   console.log("Total: ", seats.length);
