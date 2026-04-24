@@ -26,16 +26,16 @@ async function run() {
       });
     });
 
-    seatsPrint.sort((a, b) => a.zone.localeCompare(b.zone));
+    seatsPrint.sort((a, b) => a.zone!.localeCompare(b.zone!));
 
     console.table("Seats by zone, section, and row");
     console.table(seatsPrint);
 
     // Print old data.
-    formatAndPrintSeats(availabilityYesterday, "Yesterday");
+    formatAndPrintSeats(availabilityYesterday!, "Yesterday");
 
     // Print new data.
-    formatAndPrintSeats(availabilityToday, "Today");
+    formatAndPrintSeats(availabilityToday!, "Today");
 
     // Missing tickets.
     buildAndPrintMissingTickets();

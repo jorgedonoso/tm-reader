@@ -1,5 +1,8 @@
+import { PlaceNoKey } from "./PlaceNoKey";
+
 export type Segment = {
-  segments: any[];
   name: string;
-  placesNoKeys: any[];
+  placesNoKeys?: PlaceNoKey[];
+  segments: Segment[];
+  rows: any;
 };

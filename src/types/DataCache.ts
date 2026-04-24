@@ -1,5 +1,8 @@
+import { ResponseAvailability } from "./ResponseAvailability";
+import { ResponseSeat } from "./ResponseSeat";
+
 export type DataCache = {
-  seats?: any;
-  availabilityYesterday?: any;
-  availabilityToday?: any;
+  seats?: ResponseSeat;
+  availabilityYesterday?: ResponseAvailability;
+  availabilityToday?: ResponseAvailability;
 };

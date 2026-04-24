@@ -1,5 +1,6 @@
 import { availableSeatsParser, mapSeats } from "./parserLogic";
 import { getData } from "./dataLogic";
+import { ResponseAvailability } from "../types/ResponseAvailability";
 
 // Format and console output sold tickets.
 export async function buildAndPrintMissingTickets() {
@@ -24,7 +25,10 @@ export async function buildAndPrintMissingTickets() {
 }
 
 // Format and console output seats.
-export function formatAndPrintSeats(data: any, detail: any) {
+export function formatAndPrintSeats(
+  data: ResponseAvailability,
+  detail: string,
+) {
   const seats = availableSeatsParser(data);
   const date = new Date(data.meta.modified);
   const shortDate = date.toLocaleDateString("en-US");

@@ -16,7 +16,7 @@ export function mapSeats(data: any) {
         section = s.name;
         s.segments.forEach((r: Segment) => {
           row = r.name;
-          r.placesNoKeys.forEach((pnk: [string, string]) => {
+          r.placesNoKeys?.forEach((pnk: [string, string]) => {
             res.push({
               id: pnk[0],
               zone,
@@ -51,10 +51,10 @@ export function seatsParser(data: any) {
   const zones = data.pages[0].segments.map((zone: VenueZone) => {
     return {
       name: zone.name,
-      sections: (zone.segments || []).map((section: VenueSection) => {
+      sections: zone.segments.map((section: VenueSection) => {
         return {
           name: section.name,
-          rows: (section.segments || []).map((row: VenueRow) => row.name),
+          rows: section.segments.map((row: VenueRow) => row.name),
         };
       }),
     };
