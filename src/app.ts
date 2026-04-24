@@ -4,17 +4,20 @@ import {
   buildAndPrintMissingTickets,
 } from "./logic/printLogic";
 import { getData } from "./logic/dataLogic";
+import { VenueRow } from "./types/VenueRow.js";
+import { VenueZone } from "./types/VenueZone.js";
+import { VenueSection } from "./types/VenueSection.js";
 
 async function run() {
   try {
     const { availabilityToday, availabilityYesterday, seats } = await getData();
 
     // Format seats for console output.
-    const seatsPrint = [];
+    const seatsPrint: VenueRow[] = [];
     const parsedSeats = seatsParser(seats);
 
-    parsedSeats.zones.forEach((z) => {
-      z.sections.forEach((s) => {
+    parsedSeats.zones.forEach((z: VenueZone) => {
+      z.sections.forEach((s: VenueSection) => {
         seatsPrint.push({
           zone: z.name,
           section: s.name,
