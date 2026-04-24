@@ -1,19 +1,22 @@
+import { Segment } from "../types/Segment";
+import { VenueRow } from "../types/VenueRow";
+import { VenueSection } from "../types/VenueSection";
+import { VenueZone } from "../types/VenueZone";
+
 // Map raw data into a readable structure.
-export function mapSeats(data) {
-  let zone,
-    section,
-    row = "";
-  const res = [];
+export function mapSeats(data: any) {
+  let zone: string, section: string, row: string;
+  const res: VenueRow[] = [];
 
   // Third-party format. Can't be changed.
-  data.pages.forEach((p) => {
+  data.pages.forEach((p: Segment) => {
     p.segments.forEach((z) => {
       zone = z.name;
-      z.segments.forEach((s) => {
+      z.segments.forEach((s: Segment) => {
         section = s.name;
-        s.segments.forEach((r) => {
+        s.segments.forEach((r: Segment) => {
           row = r.name;
-          r.placesNoKeys.forEach((pnk) => {
+          r.placesNoKeys.forEach((pnk: [string, string]) => {
             res.push({
               id: pnk[0],
               zone,
@@ -31,11 +34,11 @@ export function mapSeats(data) {
 }
 
 // Aggregates seat ids from data.
-export function availableSeatsParser(data) {
-  const seatIds = [];
+export function availableSeatsParser(data: any) {
+  const seatIds: any = [];
 
-  data.facets.forEach((f) => {
-    f.places.forEach((p) => {
+  data.facets.forEach((f: any) => {
+    f.places.forEach((p: any) => {
       seatIds.push(...eventParser(p));
     });
   });
@@ -44,14 +47,14 @@ export function availableSeatsParser(data) {
 }
 
 // Aggregates zones, sections and rows.
-export function seatsParser(data) {
-  const zones = data.pages[0].segments.map((zone) => {
+export function seatsParser(data: any) {
+  const zones = data.pages[0].segments.map((zone: VenueZone) => {
     return {
       name: zone.name,
-      sections: (zone.segments || []).map((section) => {
+      sections: (zone.segments || []).map((section: VenueSection) => {
         return {
           name: section.name,
-          rows: (section.segments || []).map((row) => row.name),
+          rows: (section.segments || []).map((row: VenueRow) => row.name),
         };
       }),
     };
@@ -62,10 +65,10 @@ export function seatsParser(data) {
 
 // Parses event ids from single string with regex like syntax.
 // Ex: "GEYDCOSDHI[2Q,3[A,Q],4[A,Q]]"
-export function eventParser(input) {
+export function eventParser(input: string) {
   return parse(input);
 
-  function parse(str) {
+  function parse(str: string) {
     let i = 0;
 
     const results = [""];
@@ -112,7 +115,7 @@ export function eventParser(input) {
     return results;
   }
 
-  function splitTopLevel(str) {
+  function splitTopLevel(str: string) {
     const parts = [];
     let depth = 0;
     let current = "";

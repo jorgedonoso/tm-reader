@@ -1,12 +1,12 @@
-import { seatsParser } from "./logic/parserLogic.js";
+import { seatsParser } from "./logic/parserLogic";
 import {
   formatAndPrintSeats,
   buildAndPrintMissingTickets,
 } from "./logic/printLogic";
 import { getData } from "./logic/dataLogic";
-import { VenueRow } from "./types/VenueRow.js";
-import { VenueZone } from "./types/VenueZone.js";
-import { VenueSection } from "./types/VenueSection.js";
+import { VenueRow } from "./types/VenueRow";
+import { VenueZone } from "./types/VenueZone";
+import { VenueSection } from "./types/VenueSection";
 
 async function run() {
   try {

@@ -1,6 +1,7 @@
+import { Segment } from "./Segment";
 import { VenueSection } from "./VenueSection";
 
-export type VenueZone = {
+export type VenueZone = Segment & {
   name: string;
   sections: VenueSection[];
 };
