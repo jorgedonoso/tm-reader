@@ -1,5 +1,5 @@
 import { DataCache } from "../types/DataCache.js";
-import { readJsonFile } from "./helpers.js";
+import { readJsonFile } from "./helpers";
 
 const cache: DataCache = {};
 
