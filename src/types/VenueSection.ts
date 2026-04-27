@@ -1,6 +1,6 @@
 import { Segment } from "./Segment";
 
-export type VenueSection = Segment & {
+export type VenueSection = {
   name: string;
-  rows: any;
+  rows: string[];
 };

@@ -50,20 +50,20 @@ export function availableSeatsParser(data: ResponseAvailability): string[] {
 }
 
 // Aggregates zones, sections and rows.
-export function seatsParser(data: any) {
-  const zones = data.pages[0].segments.map((zone: VenueZone) => {
+export function seatsParser(data: ResponseSeat): VenueZone[] {
+  const zones = data.pages[0].segments.map((zone: Segment) => {
     return {
       name: zone.name,
-      sections: zone.segments.map((section: VenueSection) => {
+      sections: zone.segments.map((section: Segment) => {
         return {
           name: section.name,
-          rows: section.segments.map((row: VenueRow) => row.name),
+          rows: section.segments.map((row: VenueRow) => row.name!),
         };
       }),
     };
   });
 
-  return { zones };
+  return zones;
 }
 
 // Parses event ids from single string with regex like syntax.

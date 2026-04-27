@@ -14,9 +14,10 @@ async function run() {
 
     // Format seats for console output.
     const seatsPrint: VenueRow[] = [];
-    const parsedSeats = seatsParser(seats);
+    const zones: VenueZone[] = seatsParser(seats);
 
-    parsedSeats.zones.forEach((z: VenueZone) => {
+    // `zones` has nested data. We need it flat for output.
+    zones.forEach((z: VenueZone) => {
       z.sections.forEach((s: VenueSection) => {
         seatsPrint.push({
           zone: z.name,
