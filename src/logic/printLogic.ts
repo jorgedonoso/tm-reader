@@ -1,6 +1,7 @@
 import { availableSeatsParser, mapSeats } from "./parserLogic";
 import { getData } from "./dataLogic";
 import { ResponseAvailability } from "../types/ResponseAvailability";
+import { VenueRow } from "../types/VenueRow";
 
 // Format and console output sold tickets.
 export async function buildAndPrintMissingTickets() {
@@ -13,10 +14,13 @@ export async function buildAndPrintMissingTickets() {
   // Calculate and populate missing seats.
   const todaySet = new Set(rawToday);
   const missing = rawYesterday.filter((at: any) => !todaySet.has(at));
-  const missingSeatDetails: any = [];
+  const missingSeatDetails: VenueRow[] = [];
 
-  missing.forEach((m: any) => {
-    missingSeatDetails.push(mappedSeats.find((ms) => ms.id == m));
+  missing.forEach((m: string) => {
+    const found = mappedSeats.find((ms) => ms.id == m);
+    if (found) {
+      missingSeatDetails.push(found);
+    }
   });
 
   // Show.
