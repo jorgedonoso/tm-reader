@@ -14,8 +14,8 @@ export function getData(): Promise<DataCache> {
 async function fetchData(): Promise<DataCache> {
   const [seats, availabilityToday, availabilityYesterday] = await Promise.all([
     readJsonFile("./data/seats.json"),
-    readJsonFile("./data/availability-yesterday.json"),
     readJsonFile("./data/availability-today.json"),
+    readJsonFile("./data/availability-yesterday.json"),
   ]);
 
   return {
