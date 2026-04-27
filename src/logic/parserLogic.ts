@@ -1,15 +1,18 @@
+import { Facet, ResponseAvailability } from "../types/ResponseAvailability";
+import { Page, ResponseSeat } from "../types/ResponseSeat";
 import { Segment } from "../types/Segment";
 import { VenueRow } from "../types/VenueRow";
 import { VenueSection } from "../types/VenueSection";
 import { VenueZone } from "../types/VenueZone";
 
 // Map raw data into a readable structure.
-export function mapSeats(data: any) {
+export function mapSeats(data: ResponseSeat) {
   let zone: string, section: string, row: string;
   const res: VenueRow[] = [];
 
   // Third-party format. Can't be changed.
-  data.pages.forEach((p: Segment) => {
+
+  data.pages.forEach((p: Page) => {
     p.segments.forEach((z) => {
       zone = z.name;
       z.segments.forEach((s: Segment) => {
@@ -34,11 +37,11 @@ export function mapSeats(data: any) {
 }
 
 // Aggregates seat ids from data.
-export function availableSeatsParser(data: any) {
-  const seatIds: any = [];
+export function availableSeatsParser(data: ResponseAvailability): string[] {
+  const seatIds: string[] = [];
 
-  data.facets.forEach((f: any) => {
-    f.places.forEach((p: any) => {
+  data.facets.forEach((f: Facet) => {
+    f.places.forEach((p: string) => {
       seatIds.push(...eventParser(p));
     });
   });

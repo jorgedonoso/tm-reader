@@ -13,7 +13,8 @@ export async function buildAndPrintMissingTickets() {
 
   // Calculate and populate missing seats.
   const todaySet = new Set(rawToday);
-  const missing = rawYesterday.filter((at: any) => !todaySet.has(at));
+  const missing = rawYesterday.filter((at: string) => !todaySet.has(at));
+
   const missingSeatDetails: VenueRow[] = [];
 
   missing.forEach((m: string) => {

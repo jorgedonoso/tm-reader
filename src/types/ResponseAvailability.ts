@@ -2,7 +2,7 @@ type Meta = {
   modified: string;
 };
 
-type Facet = {
+export type Facet = {
   places: string[];
 };
 

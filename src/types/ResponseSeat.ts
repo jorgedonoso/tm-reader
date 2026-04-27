@@ -4,6 +4,6 @@ export type ResponseSeat = {
   pages: Page[];
 };
 
-type Page = {
+export type Page = {
   segments: Segment[];
 };
