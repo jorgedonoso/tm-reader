@@ -2,7 +2,6 @@ import { Facet, ResponseAvailability } from "../types/ResponseAvailability";
 import { Page, ResponseSeat } from "../types/ResponseSeat";
 import { Segment } from "../types/Segment";
 import { VenueRow } from "../types/VenueRow";
-import { VenueSection } from "../types/VenueSection";
 import { VenueZone } from "../types/VenueZone";
 
 // Map raw data into a readable structure.
@@ -51,17 +50,18 @@ export function availableSeatsParser(data: ResponseAvailability): string[] {
 
 // Aggregates zones, sections and rows.
 export function seatsParser(data: ResponseSeat): VenueZone[] {
-  const zones = data.pages[0].segments.map((zone: Segment) => {
-    return {
-      name: zone.name,
-      sections: zone.segments.map((section: Segment) => {
-        return {
-          name: section.name,
-          rows: section.segments.map((row: VenueRow) => row.name!),
-        };
-      }),
-    };
-  });
+  const zones =
+    data.pages[0]?.segments.map((zone: Segment) => {
+      return {
+        name: zone.name,
+        sections: zone.segments.map((section: Segment) => {
+          return {
+            name: section.name,
+            rows: section.segments.map((row: VenueRow) => row.name!),
+          };
+        }),
+      };
+    }) || [];
 
   return zones;
 }

@@ -1,4 +1,3 @@
-import { Segment } from "./Segment";
 import { VenueSection } from "./VenueSection";
 
 export type VenueZone = {
