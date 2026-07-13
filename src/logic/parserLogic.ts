@@ -1,19 +1,24 @@
+import { Facet, ResponseAvailability } from "../types/ResponseAvailability";
+import { Page, ResponseSeat } from "../types/ResponseSeat";
+import { Segment } from "../types/Segment";
+import { VenueRow } from "../types/VenueRow";
+import { VenueZone } from "../types/VenueZone";
+
 // Map raw data into a readable structure.
-export function mapSeats(data) {
-  let zone,
-    section,
-    row = "";
-  const res = [];
+export function mapSeats(data: ResponseSeat) {
+  let zone: string, section: string, row: string;
+  const res: VenueRow[] = [];
 
   // Third-party format. Can't be changed.
-  data.pages.forEach((p) => {
+
+  data.pages.forEach((p: Page) => {
     p.segments.forEach((z) => {
       zone = z.name;
-      z.segments.forEach((s) => {
+      z.segments.forEach((s: Segment) => {
         section = s.name;
-        s.segments.forEach((r) => {
+        s.segments.forEach((r: Segment) => {
           row = r.name;
-          r.placesNoKeys.forEach((pnk) => {
+          r.placesNoKeys?.forEach((pnk: [string, string]) => {
             res.push({
               id: pnk[0],
               zone,
@@ -31,11 +36,11 @@ export function mapSeats(data) {
 }
 
 // Aggregates seat ids from data.
-export function availableSeatsParser(data) {
-  const seatIds = [];
+export function availableSeatsParser(data: ResponseAvailability): string[] {
+  const seatIds: string[] = [];
 
-  data.facets.forEach((f) => {
-    f.places.forEach((p) => {
+  data.facets.forEach((f: Facet) => {
+    f.places.forEach((p: string) => {
       seatIds.push(...eventParser(p));
     });
   });
@@ -44,28 +49,29 @@ export function availableSeatsParser(data) {
 }
 
 // Aggregates zones, sections and rows.
-export function seatsParser(data) {
-  const zones = data.pages[0].segments.map((zone) => {
-    return {
-      name: zone.name,
-      sections: (zone.segments || []).map((section) => {
-        return {
-          name: section.name,
-          rows: (section.segments || []).map((row) => row.name),
-        };
-      }),
-    };
-  });
+export function seatsParser(data: ResponseSeat): VenueZone[] {
+  const zones =
+    data.pages[0]?.segments.map((zone: Segment) => {
+      return {
+        name: zone.name,
+        sections: zone.segments.map((section: Segment) => {
+          return {
+            name: section.name,
+            rows: section.segments.map((row: VenueRow) => row.name!),
+          };
+        }),
+      };
+    }) || [];
 
-  return { zones };
+  return zones;
 }
 
 // Parses event ids from single string with regex like syntax.
 // Ex: "GEYDCOSDHI[2Q,3[A,Q],4[A,Q]]"
-export function eventParser(input) {
+export function eventParser(input: string) {
   return parse(input);
 
-  function parse(str) {
+  function parse(str: string) {
     let i = 0;
 
     const results = [""];
@@ -112,7 +118,7 @@ export function eventParser(input) {
     return results;
   }
 
-  function splitTopLevel(str) {
+  function splitTopLevel(str: string) {
     const parts = [];
     let depth = 0;
     let current = "";

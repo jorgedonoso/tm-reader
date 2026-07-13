@@ -1,20 +1,24 @@
-import { seatsParser } from "./logic/parserLogic.js";
+import { seatsParser } from "./logic/parserLogic";
 import {
   formatAndPrintSeats,
   buildAndPrintMissingTickets,
 } from "./logic/printLogic";
 import { getData } from "./logic/dataLogic";
+import { VenueRow } from "./types/VenueRow";
+import { VenueZone } from "./types/VenueZone";
+import { VenueSection } from "./types/VenueSection";
 
 async function run() {
   try {
     const { availabilityToday, availabilityYesterday, seats } = await getData();
 
     // Format seats for console output.
-    const seatsPrint = [];
-    const parsedSeats = seatsParser(seats);
+    const seatsPrint: VenueRow[] = [];
+    const zones: VenueZone[] = seatsParser(seats);
 
-    parsedSeats.zones.forEach((z) => {
-      z.sections.forEach((s) => {
+    // `zones` has nested data. We need it flat for output.
+    zones.forEach((z: VenueZone) => {
+      z.sections.forEach((s: VenueSection) => {
         seatsPrint.push({
           zone: z.name,
           section: s.name,
@@ -23,16 +27,16 @@ async function run() {
       });
     });
 
-    seatsPrint.sort((a, b) => a.zone.localeCompare(b.zone));
+    seatsPrint.sort((a, b) => a.zone!.localeCompare(b.zone!));
 
     console.table("Seats by zone, section, and row");
     console.table(seatsPrint);
 
     // Print old data.
-    formatAndPrintSeats(availabilityYesterday, "Yesterday");
+    formatAndPrintSeats(availabilityYesterday!, "Yesterday");
 
     // Print new data.
-    formatAndPrintSeats(availabilityToday, "Today");
+    formatAndPrintSeats(availabilityToday!, "Today");
 
     // Missing tickets.
     buildAndPrintMissingTickets();

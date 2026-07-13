@@ -1,21 +1,26 @@
-import { DataCache } from "../types/DataCache.js";
-import { readJsonFile } from "./helpers.js";
+import { DataCache } from "../types/DataCache";
+import { readJsonFile } from "./helpers";
 
-const cache: DataCache = {};
+let cachePromise: Promise<DataCache> | null = null;
 
-export async function getData() {
-  if (!cache.seats) {
-    const [seatsRaw, availabilityYesterday, availabilityToday] =
-      await Promise.all([
-        readJsonFile("./data/seats.json"),
-        readJsonFile("./data/availability-yesterday.json"),
-        readJsonFile("./data/availability-today.json"),
-      ]);
-
-    cache.seats = seatsRaw;
-    cache.availabilityYesterday = availabilityYesterday;
-    cache.availabilityToday = availabilityToday;
+export function getData(): Promise<DataCache> {
+  if (!cachePromise) {
+    cachePromise = fetchData();
   }
 
-  return cache;
+  return cachePromise;
+}
+
+async function fetchData(): Promise<DataCache> {
+  const [seats, availabilityToday, availabilityYesterday] = await Promise.all([
+    readJsonFile("./data/seats.json"),
+    readJsonFile("./data/availability-today.json"),
+    readJsonFile("./data/availability-yesterday.json"),
+  ]);
+
+  return {
+    seats,
+    availabilityToday,
+    availabilityYesterday,
+  };
 }

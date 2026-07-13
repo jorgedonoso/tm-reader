@@ -1,5 +1,7 @@
-import { availableSeatsParser, mapSeats } from "./parserLogic.js";
+import { availableSeatsParser, mapSeats } from "./parserLogic";
 import { getData } from "./dataLogic";
+import { ResponseAvailability } from "../types/ResponseAvailability";
+import { VenueRow } from "../types/VenueRow";
 
 // Format and console output sold tickets.
 export async function buildAndPrintMissingTickets() {
@@ -11,11 +13,15 @@ export async function buildAndPrintMissingTickets() {
 
   // Calculate and populate missing seats.
   const todaySet = new Set(rawToday);
-  const missing = rawYesterday.filter((at) => !todaySet.has(at));
-  const missingSeatDetails = [];
+  const missing = rawYesterday.filter((at: string) => !todaySet.has(at));
 
-  missing.forEach((m) => {
-    missingSeatDetails.push(mappedSeats.find((ms) => ms.id == m));
+  const missingSeatDetails: VenueRow[] = [];
+
+  missing.forEach((m: string) => {
+    const found = mappedSeats.find((ms) => ms.id == m);
+    if (found) {
+      missingSeatDetails.push(found);
+    }
   });
 
   // Show.
@@ -24,7 +30,10 @@ export async function buildAndPrintMissingTickets() {
 }
 
 // Format and console output seats.
-export function formatAndPrintSeats(data, detail) {
+export function formatAndPrintSeats(
+  data: ResponseAvailability,
+  detail: string,
+) {
   const seats = availableSeatsParser(data);
   const date = new Date(data.meta.modified);
   const shortDate = date.toLocaleDateString("en-US");
