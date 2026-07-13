@@ -1,4 +1,4 @@
-# TM Reader
+# Ticketmaster Seat Tracker
 
 A simple data comparison tool to identify which tickets were sold between two dates.
 
